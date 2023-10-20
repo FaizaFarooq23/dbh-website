@@ -70,8 +70,8 @@ export default function DbhFooter() {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-x-4 gap-y-2 pt-12  pr-2">
-          {quickLinks.map((item) => (
-            <Link href={item.link}>
+          {quickLinks.map((item, index) => (
+            <Link key={index} href={item.link}>
               <div className="flex items-center font-medium slide-underline  text-primaryText gap-x-2 justify-start">
                 <RiArrowDropDownLine className="-ml-2 -rotate-90 text-3xl" />
                 <span className="">{item.name}</span>

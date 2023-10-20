@@ -33,8 +33,8 @@ export default function Facts() {
       </div>
       <div className="pt-8 text-[#39385A]">We work with the leading producers, manufacturers and brands in the world.</div>
       <div className="flex gap-x-10 pt-8">
-        {counterData.map(({ number, text }) => (
-          <Counter number={number} text={text} />
+        {counterData.map(({ number, text }, index) => (
+          <Counter key={index} number={number} text={text} />
         ))}
       </div>
       </div>

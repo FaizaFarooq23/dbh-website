@@ -43,8 +43,9 @@ export default function Services() {
       </div>
 
       <div className="flex pt-16 px-20 gap-x-6 ">
-        {services.map((service) => (
+        {services.map((service, index) => (
           <IconWithText
+          key={index}
             image={service.image}
             description={service.description}
             title={service.title}
