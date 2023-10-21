@@ -26,7 +26,7 @@ export default function Home() {
   
 
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       <BaseLayout aboutUsRef={aboutUsRef} heroRef={heroRef} serviceRef={servicesRef} productRef={productRef} contactRef={contactUsRef}>
         <div ref={heroRef}>
           <HeroSection />
