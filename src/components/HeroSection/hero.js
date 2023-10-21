@@ -10,7 +10,7 @@ export default function HeroSection() {
         className="w-full h-[560px] -mt-10 "
       />
       <div className="flex flex-col items-start px-20">
-      <div className=" z-10 bg-tertiary -mt-[42%] text-white h-[400px] w-[52%] py-10 px-8">
+      <div className=" z-10 bg-tertiary lg:-mt-[42%] text-white h-[400px] w-[52%] py-10 px-8">
         <div>
           <img src="/images/dbhLogo.jpg" alt="logo" className="w-32 h-16" />
         </div>

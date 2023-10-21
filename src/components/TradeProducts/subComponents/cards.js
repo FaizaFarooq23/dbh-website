@@ -12,16 +12,16 @@ export default function ProductCards({
   productlink,
 }) {
   return (
-    <div className="flex flex-col shadow-xl rounded-lg bg-white ">
+    <div className="flex flex-col shadow-xl h-[500px] rounded-lg bg-white ">
         <div className="">
-          <img src={image} alt={imageName} className="w-80 h-56 rounded-t-lg" />
+          <img src={image} alt={imageName} className="w-full h-56 rounded-t-lg" />
         </div>
       <div className="bg-primary bg-opacity-70 -mt-20 w-full p-1 z-10">
         <div className="flex items-center justify-start">
           <div className=" pl-10">
           <img src="/images/dbhLogo.jpg" className="h-4 w-8" alt="DBH Logo" />
           </div>
-          <div className="flex flex-col items-center ml-14 gap-y-2">
+          <div className="flex flex-col items-center px-4 gap-y-2">
             <span className="text-white  text-xs">{productName}</span>
             <Link href="/">
               <div className="text-white  text-xs">www.dbh.com</div>
@@ -35,12 +35,12 @@ export default function ProductCards({
           {productCategory}
         </span>
       </div>
-      <div className="flex bg-white flex-col rounded-b-lg p-4 gap-y-4 items-start">
+      <div className="flex bg-white flex-col h-full justify-between rounded-b-lg p-4 items-start">
         <div className="text-primary text-2xl font-bold">{cardTitle}</div>
         <div className=" text-zinc-600 pr-4">{cardDescription}</div>
         <div>
           <Link href="/">
-            <div className="bg-white  border-2 hover:text-white hover:bg-primary border-primary text-secondary  rounded-full text-center py-2 px-6 cursor-pointer">
+            <div className="bg-white mb-4 border-2 hover:text-white hover:bg-primary border-primary text-secondary  rounded-full text-center py-2 px-6 cursor-pointer">
               Learn More
             </div>
           </Link>

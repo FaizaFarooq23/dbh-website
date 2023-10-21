@@ -1,23 +1,23 @@
 import React from "react";
 
-export default function IntroSection() {
+
+const IntroSection = React.forwardRef((props, ref) => {
   return (
-    <div className="flex flex-col">
+    <div ref={ref} className="flex flex-col my-4">
       <div className="flex items-center justify-between px-40 gap-x-20">
         <div>
-          <h1 className="text-2xl font-bold py-4">Our Vision:</h1>
+          <h1 className="text-2xl font-bold text-black py-4">About Us</h1>
           <p>
-            Our vision is to continue innovating and expanding, both in terms of
-            our product offerings and our geographic reach. We aim to be the go-to
-            partner for businesses looking to make a meaningful impact through
-            promotional items.
-          </p>
-          <h1 className="text-2xl font-bold py-4">Our Commitment:</h1>
-          <p>
-            Quality, creativity, and customer satisfaction are at the core of
-            everything we do. We take pride in delivering high-quality promotional
-            solutions that help our clients enhance their brand visibility and
-            achieve their marketing goals.
+            At <b>dbh</b> , we take pride in being your go-to source for top-quality
+            corporate merchandising and promotional giveaways. With a commitment
+            to excellence, authenticity, and reliability, we have earned the
+            trust of businesses worldwide. Let us help you elevate your brand,
+            engage your audience, and make a lasting impression.
+            <br/>
+            Our reputation is built on authenticity and reliability. We are
+            committed to delivering on our promises and exceeding your
+            expectations. When you choose <b>dbh </b> , you're choosing a
+            partner you can trust.
           </p>
         </div>
         <div className="flex items-center mt-6">
@@ -33,4 +33,6 @@ export default function IntroSection() {
       </div> */}
     </div>
   );
-}
+});
+
+export default IntroSection;

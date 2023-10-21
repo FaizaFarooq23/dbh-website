@@ -5,64 +5,43 @@ export default function Products() {
   const productList = [
     {
       image: "/images/gifts.jpg",
-      imageName: "Corporate Gifts ",
+      imageName: "Corporate Gifts",
       productName: "Gifts",
       link: "",
       productCategory: "Gifts",
-      cardTitle: "Corporate Gifts ",
-      cardDescription: "desp",
+      cardTitle: "Corporate Gifts",
+      cardDescription: " Show your appreciation to clients and employees with thoughtfully crafted corporate gifts that showcase your gratitude.",
       productlink: "",
     },
     {
-      image: "/images/gadgets.jpg",
-      imageName: "image2",
-      productName: "Product 2",
+      image: "/images/items.jpg",
+      imageName: "Promotional Items",
+      productName: "Promotional Items",
       link: "",
-      productCategory: "Category 2",
-      cardTitle: "Card Title 2",
-      cardDescription: "Card Description 2",
+      productCategory: "Promotional Items",
+      cardTitle: "Promotional Items",
+      cardDescription: "Make a statement at trade shows and events with eye-catching promotional items that leave a lasting impression.      ",
       productlink: "",
     },
     {
-      image: "/images/machinery-equipment.jpg",
-      imageName: "image3",
-      productName: "Product 3",
+      image: "/images/apperal.jpg",
+      imageName: "Branded Apparel",
+      productName: "Branded Apparel ",
       link: "",
-      productCategory: "Category 3",
-      cardTitle: "Card Title 3",
-      cardDescription: "Card Description 3",
+      productCategory: "Branded Apparel",
+      cardTitle: "Branded Apparel",
+      cardDescription: " Elevate your team's look with custom-designed uniforms and corporate apparel that reflect your brand's identity.",
       productlink: "",
     },
-    // {
-    //   image: "/images/design-printsolutions.jpg",
-    //   imageName: "image4",
-    //   productName: "Product 4",
-    //   link: "",
-    //   productCategory: "Category 4",
-    //   cardTitle: "Card Title 4",
-    //   cardDescription: "Card Description 4",
-    //   productlink: "",
-    // },
-    // {
-    //   image: "/images/bags.jpg",
-    //   imageName: "image5",
-    //   productName: "Product 5",
-    //   link: "",
-    //   productCategory: "Category 5",
-    //   cardTitle: "Card Title 5",
-    //   cardDescription: "Card Description 5",
-    //   productlink: "",
-    // },
-    // {
-    //   image: "/images/stationary.jpg",
-    //   imageName: "image6",
-    //   productName: "Product 6",
-    //   link: "",
-    //   productCategory: "Category 6",
-    //   cardTitle: "Card Title 6",
-    //   cardDescription: "Card Description 6",
-    //   productlink: "",
-    // }
+{
+      image: "/images/giveaway.jpg",
+      imageName: "Unique Giveaways",
+      productName: "Unique Giveaways",
+      link: "",
+      productCategory: "Gadgets",
+      cardTitle: "Unique Giveaways",
+      cardDescription: "Create buzz around your brand with innovative and unique giveaway ideas that capture attention.",
+}
   ];
   return (
     <div className=" my-10 py-8 bg-[#fafafa]  flex flex-col items-center justify-center">
@@ -75,7 +54,7 @@ export default function Products() {
           to the following:
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-x-10 gap-y-10   py-10">
+      <div className="grid grid-cols-4 gap-x-10 gap-y-10 px-[6%]  py-10">
       {productList.map((product,index) => (
         <div className="" key={index}>
           <ProductCards
