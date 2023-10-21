@@ -1,36 +1,34 @@
 
 import React, { useState } from "react";
 
-export default function NavBar({productRef,serviceRef,contactRef,aboutUsRef, setActive}) {
-  
-  const [activeRef, setActiveRef] = useState(null);
+export default function NavBar({ productRef, serviceRef, contactRef, aboutUsRef, heroRef, complete }) {
+
   const scrollToHero = () => {
-    setActive("");
+    
     if (heroRef && heroRef.current) {
       heroRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToProducts = () => {
-    setActive("Products");
+    
     if (productRef && productRef.current) {
       productRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
   const scrollToAboutUs = () => {
-    setActive("About Us");
+    
     if (aboutUsRef && aboutUsRef.current) {
       aboutUsRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
   const scrollToService = () => {
-    setActive("Service");
+    
     if (serviceRef && serviceRef.current) {
       serviceRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
   const scrollToContactUs = () => {
-    setActive("");
     if (contactRef && contactRef.current) {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -39,30 +37,30 @@ export default function NavBar({productRef,serviceRef,contactRef,aboutUsRef, set
 
 
   return (
-    <div className="flex justify-between rounded-lg bg-white px-8 py-3 w-[90%] shadow-lg z-50">
+    <div className={`flex justify-between items-center rounded-lg bg-white  py-3 ${complete ? "w-full px-20" : "w-[90%] px-8"}  shadow-lg z-50`}>
+      {complete &&
+        <img src="/images/dbhLogo.jpg" className="h-10 w-20" />
+      }
       <div className="flex items-center gap-x-16">
-        
-          <div  className="nav-item font-semibold cursor-pointer">
-            Home
-          </div>
+        <div onClick={scrollToHero} className="nav-item font-semibold cursor-pointer">
+          Home
+        </div>
 
-          <div className="nav-item font-semibold cursor-pointer" onClick={scrollToAboutUs}>
-            AboutUs
-          </div>
+        <div className="nav-item font-semibold cursor-pointer" onClick={scrollToAboutUs}>
+          AboutUs
+        </div>
 
-          <div className="nav-item font-semibold cursor-pointer" onClick={scrollToProducts}>
-            Products
-          </div>
+        <div className="nav-item font-semibold cursor-pointer" onClick={scrollToProducts}>
+          Products
+        </div>
 
-          <div  className="nav-item font-semibold cursor-pointer"onClick={scrollToService}>
-            Services
-          </div>
+        <div className="nav-item font-semibold cursor-pointer" onClick={scrollToService}>
+          Services
+        </div>
 
-          <div  className="nav-item font-semibold cursor-pointer"onClick={scrollToContactUs}>
-            ContactUs
-          </div>
-       
-    
+        <div className="nav-item font-semibold cursor-pointer" onClick={scrollToContactUs}>
+          ContactUs
+        </div>
       </div>
       <div>
         <button className="bg-secondary nav-button shadow-xl text-white font-semibold hover:bg-primary rounded-lg px-4 py-3 cursor-pointer">

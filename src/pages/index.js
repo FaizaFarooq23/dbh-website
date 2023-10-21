@@ -10,7 +10,6 @@ import ContactUs from "@/components/ContactUs/contactUs";
 import Map from "@/components/Map/map";
 
 export default function Home() {
-  const [active, setActive] = useState("");
   const heroRef = useRef(null);
   const productRef = useRef(null);
   const aboutUsRef = useRef(null);
@@ -24,49 +23,27 @@ export default function Home() {
     { name: "Contact Us", ref: contactUsRef },
     { name: "Services", ref: servicesRef },
   ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentRef = refs.find(({ ref }) => {
-        if (ref.current) {
-          const rect = ref.current.getBoundingClientRect();
-          return rect.top >= 0 && rect.bottom <= window.innerHeight;
-        }
-        return false;
-      });
-
-      if (currentRef) {
-        setActive(currentRef.name);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    // Initial call to set active section
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [refs]);
+  
 
   return (
     <div className="bg-white">
-      <BaseLayout aboutUsRef={aboutUsRef} serviceRef={servicesRef} productRef={productRef} contactRef={contactUsRef} setActive={setActive}>
-        <HeroSection />
+      <BaseLayout aboutUsRef={aboutUsRef} heroRef={heroRef} serviceRef={servicesRef} productRef={productRef} contactRef={contactUsRef}>
+        <div ref={heroRef}>
+          <HeroSection />
+        </div>
         <div ref={aboutUsRef}>
           <TextSection />
           <IntroSection />
         </div>
         <div ref={productRef}>
-        <Products />
+          <Products />
         </div>
         <div ref={servicesRef}>
-        <Services />
+          <Services />
         </div>
         <Facts />
         <div ref={contactUsRef} className="flex w-full justify-center px-20 my-10">
-          <ContactUs  />
+          <ContactUs />
           <Map />
         </div>
       </BaseLayout>
