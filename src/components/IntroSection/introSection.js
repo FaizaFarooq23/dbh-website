@@ -1,9 +1,9 @@
 import React from "react";
 
 
-const IntroSection = React.forwardRef((props, ref) => {
+const IntroSection = () => {
   return (
-    <div ref={ref} className="flex flex-col my-4">
+    <div  className="flex flex-col my-4">
       <div className="flex items-center justify-between px-40 gap-x-20">
         <div>
           <h1 className="text-2xl font-bold text-black py-4">About Us</h1>
@@ -33,6 +33,6 @@ const IntroSection = React.forwardRef((props, ref) => {
       </div> */}
     </div>
   );
-});
+}
 
 export default IntroSection;

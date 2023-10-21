@@ -52,15 +52,23 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <BaseLayout>
+      <BaseLayout aboutUsRef={aboutUsRef} serviceRef={servicesRef} productRef={productRef} contactRef={contactUsRef} setActive={setActive}>
         <HeroSection />
-        <TextSection />
-        <IntroSection ref={aboutUsRef} />
-        <Products ref={productRef} />
-        <Services ref={servicesRef} />
+        <div ref={aboutUsRef}>
+          <TextSection />
+          <IntroSection />
+        </div>
+        <div ref={productRef}>
+        <Products />
+        </div>
+        <div ref={servicesRef}>
+        <Services />
+        </div>
         <Facts />
-        <ContactUs ref={contactUsRef} />
-        <Map />
+        <div ref={contactUsRef} className="flex w-full justify-center px-20 my-10">
+          <ContactUs  />
+          <Map />
+        </div>
       </BaseLayout>
     </div>
   );

@@ -46,19 +46,19 @@ export default function NavBar({productRef,serviceRef,contactRef,aboutUsRef, set
             Home
           </div>
 
-          <div className="nav-item font-semibold cursor-pointer" onScroll={scrollToAboutUs}>
+          <div className="nav-item font-semibold cursor-pointer" onClick={scrollToAboutUs}>
             AboutUs
           </div>
 
-          <div className="nav-item font-semibold cursor-pointer" onScroll={scrollToProducts}>
+          <div className="nav-item font-semibold cursor-pointer" onClick={scrollToProducts}>
             Products
           </div>
 
-          <div  className="nav-item font-semibold cursor-pointer"onScroll={scrollToService}>
+          <div  className="nav-item font-semibold cursor-pointer"onClick={scrollToService}>
             Services
           </div>
 
-          <div  className="nav-item font-semibold cursor-pointer"onScroll={scrollToContactUs}>
+          <div  className="nav-item font-semibold cursor-pointer"onClick={scrollToContactUs}>
             ContactUs
           </div>
        
