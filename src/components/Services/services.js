@@ -30,7 +30,7 @@ export default function Services() {
   ];
 
   return (
-    <div className=" pb-20">
+    <div className=" pb-8 lg:pb-20">
       <div className=" flex flex-col items-center gap-y-4">
         <div className="text-primary text-2xl font-bold">Our Services</div>
         <div className="text-4xl text-center font-bold">
