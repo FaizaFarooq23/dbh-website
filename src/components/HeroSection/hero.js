@@ -6,8 +6,8 @@ export default function HeroSection({contactRef}) {
     if (contactRef && contactRef.current) {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  
   };
+  
   return (
     <div className="">
       <img
@@ -26,7 +26,7 @@ export default function HeroSection({contactRef}) {
         <div className="py-4 font-medium  ">
         <span>The trading collaborator you can trust.</span>
         </div>
-        <div className="py-2 px-4 cursor-pointer bg-secondary w-40 lg:w-[36%] mt-6  font-semibold flex items-center justify-center rounded-sm " onClick={handleScroll}>
+        <div className="py-2 px-4 cursor-pointer bg-secondary w-48 lg:w-[36%] mt-6  font-semibold flex items-center justify-center rounded-sm " onClick={handleScroll}>
         <button className="text-center uppercase">Contact Us</button>
         <IoMdArrowDropright className="ml-2 text-2xl"/>
         </div>

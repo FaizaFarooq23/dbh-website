@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
-import { BiSolidPhoneCall } from "react-icons/bi";
-import { IoIosMail } from "react-icons/io";
-import { FaMapLocationDot } from "react-icons/fa6";
+
 
 export default function NavBar({
   productRef,
@@ -118,8 +116,8 @@ export default function NavBar({
         </button>
       </div>
       {menuOpen && (
-        <div className="bg-white  py-6 w-72 top-[60px] left-0 absolute z-50 lg:hidden flex shadow-lg">
-          <nav className="lg:hidden overflow-scroll flex flex-col items-start w-full px-4 gap-y-8">
+        <div className="bg-white  py-6 w-full top-[60px] left-0 absolute z-50 lg:hidden flex shadow-lg">
+          <nav className="lg:hidden overflow-scroll h-screen flex flex-col items-start w-full px-4 gap-y-8">
             <div
               onClick={scrollToHero}
               className={`hover:text-secondary mt-4 border-b-2 pb-4 w-full font-semibold cursor-pointer ${
@@ -164,7 +162,7 @@ export default function NavBar({
             >
               ContactUs
             </div>
-       
+              
             <div className="">
               <button className="bg-secondary nav-button shadow-xl text-white font-semibold hover-bg-primary rounded-lg px-4 py-3 cursor-pointer">
                 Get a quote now

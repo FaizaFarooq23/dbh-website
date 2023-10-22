@@ -78,6 +78,7 @@ export default function DbhFooter({
         <div className="grid grid-cols-2 gap-x-4 gap-y-2 pt-12 pr-2">
           {quickLinks.map((item, index) => (
             <div
+              key={index}
               className="flex items-center font-medium slide-underline  text-primaryText gap-x-2 justify-start"
               onClick={() => handleScroll(index === 4 ? contactRef : index === 1 ? productRef : index === 3 ? aboutUsRef : index === 2 ? serviceRef : heroRef)}
             >
