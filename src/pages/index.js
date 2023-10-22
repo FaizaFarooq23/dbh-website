@@ -29,7 +29,7 @@ export default function Home() {
     <div className="bg-white overflow-x-hidden">
       <BaseLayout aboutUsRef={aboutUsRef} heroRef={heroRef} serviceRef={servicesRef} productRef={productRef} contactRef={contactUsRef}>
         <div ref={heroRef}>
-          <HeroSection />
+          <HeroSection contactRef={contactUsRef} />
         </div>
         <div ref={aboutUsRef}>
           <TextSection />
@@ -42,7 +42,7 @@ export default function Home() {
           <Services />
         </div>
         <Facts />
-        <div ref={contactUsRef} className="flex w-full justify-center px-20 my-10">
+        <div ref={contactUsRef} className="flex flex-col lg:flex-row  w-full items-center justify-center px-4 lg:px-20 my-10">
           <ContactUs />
           <Map />
         </div>

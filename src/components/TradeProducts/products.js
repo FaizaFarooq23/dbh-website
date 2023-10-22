@@ -48,13 +48,13 @@ export default function Products() {
       <div className=" flex flex-col items-center gap-y-4">
         <div className="text-primary text-2xl font-bold">dbh Products</div>
         <div className="text-4xl font-bold">Our Product Line</div>
-        <div className="text-center text-lg  px-60">
+        <div className="text-center text-lg px-4 lg:px-60">
           At dbh we offer a diverse range of high-quality promotional items,
           from branded merchandise to safety products, including but not limited
           to the following:
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-x-10 gap-y-10 px-[6%]  py-10">
+      <div className="flex flex-col lg:grid lg:grid-cols-4 gap-x-10 gap-y-10 px-[6%]  py-10">
       {productList.map((product,index) => (
         <div className="" key={index}>
           <ProductCards

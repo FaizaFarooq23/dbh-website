@@ -7,7 +7,7 @@ export default function LogoHead() {
   const headList = [
     {
       icon: <BiSolidPhoneCall/>,
-      title: "Call Us: +92 332 6578943",
+      title: "Call Us:   +971 4 398 4283",
       description: "(Sat - Thu)",
     },
     {
@@ -18,7 +18,7 @@ export default function LogoHead() {
     {
       icon: <FaMapLocationDot />,
       title: "Visit Us:",
-      description: "Islamabad, Pakistan",
+      description: "Dubai, UAE",
     },
   ];
 

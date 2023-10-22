@@ -5,8 +5,26 @@ import NavBar from "../Header/subcomponent/navBar";
 
 export default function BaseLayout({ children, productRef, serviceRef, contactRef, aboutUsRef, heroRef }) {
   const [show, setShow] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    // Check for mobile screen width and update isMobile
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the width as needed
+    };
 
+    // Initial check when the component mounts
+    checkIsMobile();
+
+    // Listen for window resize events to update isMobile
+    window.addEventListener("resize", checkIsMobile);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", checkIsMobile);
+    };
+
+  }, []);
 
   useEffect(() => {
     const listenToScroll = () => {
@@ -28,18 +46,16 @@ export default function BaseLayout({ children, productRef, serviceRef, contactRe
     };
   }, []);
 
-
   return (
     <div className="w-screen min-h-screen items-center overflow-x-hidden flex">
       <div className="w-full h-full flex flex-col justify-between ">
-
-        <div className={`w-full fixed z-50 transition duration-300  ${show ? "translate-y-0" : "-translate-y-20"}`}>
+        <div className={`w-full fixed z-50 transition duration-300 ${show || isMobile ? "translate-y-0" : "lg:-translate-y-20"}`}>
           <NavBar heroRef={heroRef} productRef={productRef} serviceRef={serviceRef} contactRef={contactRef} aboutUsRef={aboutUsRef} complete />
         </div>
 
         <Header contactRef={contactRef} productRef={productRef} aboutUsRef={aboutUsRef} serviceRef={serviceRef} heroRef={heroRef} />
         {children}
-        <Footer />
+        <Footer  contactRef={contactRef} productRef={productRef} aboutUsRef={aboutUsRef} serviceRef={serviceRef} heroRef={heroRef} />
       </div>
     </div>
   );

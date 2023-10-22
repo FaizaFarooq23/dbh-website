@@ -33,16 +33,16 @@ export default function Services() {
     <div className=" pb-20">
       <div className=" flex flex-col items-center gap-y-4">
         <div className="text-primary text-2xl font-bold">Our Services</div>
-        <div className="text-4xl font-bold">
+        <div className="text-4xl text-center font-bold">
           We offer many services to progress!
         </div>
-        <div className="text-center text-lg  px-60">
+        <div className="text-center text-lg px-4 lg:px-60">
           We offer the following services to clients worldwide and in the United
           Arab Emirates.
         </div>
       </div>
 
-      <div className="flex pt-16 px-20 gap-x-6 ">
+      <div className="flex flex-col lg:flex-row pt-8 lg:pt-16 px-20 gap-y-6 lg:gap-x-6 ">
         {services.map((service, index) => (
           <IconWithText
           key={index}

@@ -5,7 +5,7 @@ export default function ContactUs() {
   return (
 
     <div className="w-full flex items-center justify-center">
-      <div className="bg-white px-20 py-16 w-full rounded ">
+      <div className="bg-white px-4 lg:px-20 pb-8 lg:pb-0 lg:pt-4 w-full rounded ">
         <h2 className="text-2xl text-primary font-bold mb-8">Contact Us</h2>
         <form>
           <div className="mb-4">

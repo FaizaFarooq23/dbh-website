@@ -4,9 +4,9 @@ import React from "react";
 const IntroSection = () => {
   return (
     <div  className="flex flex-col my-4">
-      <div className="flex items-center justify-between px-40 gap-x-20">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between px-8 lg:px-40 gap-x-20">
         <div>
-          <h1 className="text-2xl font-bold text-black py-4">About Us</h1>
+          <h1 className="text-2xl mt-4 lg:mt-0 font-bold text-black py-4">About Us</h1>
           <p>
             At <b>dbh</b> , we take pride in being your go-to source for top-quality
             corporate merchandising and promotional giveaways. With a commitment
@@ -20,7 +20,7 @@ const IntroSection = () => {
             partner you can trust.
           </p>
         </div>
-        <div className="flex items-center mt-6">
+        <div className="flex items-center  lg:mt-6">
           <img
             src="/images/supply-chain-network.jpg"
             className="h-[240px] w-[1400px]"
