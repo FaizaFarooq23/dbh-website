@@ -42,7 +42,7 @@ export default function Services() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row pt-8 lg:pt-16 px-20 gap-y-6 lg:gap-x-6 ">
+      <div className="flex flex-col lg:flex-row pt-8 lg:pt-16 px-8 lg:px-20 gap-y-6 lg:gap-x-6 ">
         {services.map((service, index) => (
           <IconWithText
           key={index}
