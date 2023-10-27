@@ -42,7 +42,7 @@ export default function Home() {
           <Services />
         </div>
         <Facts />
-        <div ref={contactUsRef} className="flex flex-col lg:flex-row  w-full items-center justify-center px-4 lg:px-20 my-10">
+        <div ref={contactUsRef} className="flex flex-col lg:flex-row  w-full items-center justify-center px-4 lg:px-20 gap-x-8 my-10">
           <ContactUs />
           <Map />
         </div>
