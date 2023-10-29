@@ -8,6 +8,7 @@ import Services from "@/components/Services/services";
 import Facts from "@/components/Facts/facts";
 import ContactUs from "@/components/ContactUs/contactUs";
 import Map from "@/components/Map/map";
+import Head from "next/head";
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -27,6 +28,11 @@ export default function Home() {
 
   return (
     <div className="bg-white overflow-x-hidden">
+    <Head>
+      <title>DBH General Trading Company</title>
+      <meta name="description" content="DBH General Trading Company" />
+      <link rel="icon" href="/images/dbhLogo.jpg" />
+    </Head>
       <BaseLayout aboutUsRef={aboutUsRef} heroRef={heroRef} serviceRef={servicesRef} productRef={productRef} contactRef={contactUsRef}>
         <div ref={heroRef}>
           <HeroSection contactRef={contactUsRef} />

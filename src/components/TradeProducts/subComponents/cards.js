@@ -8,6 +8,7 @@ export default function ProductCards({
   productCategory,
   cardTitle,
   cardDescription,
+  link,
   hideComponent
 }) {
   return (
@@ -41,9 +42,11 @@ export default function ProductCards({
         <div className=" text-zinc-600 pr-4">{cardDescription}</div>
         <div>
           {!hideComponent &&
+          <Link href={`/products/${link}`}>
             <div className="bg-white mb-4 border-2 hover:text-white hover:bg-primary border-primary text-secondary  rounded-full text-center py-2 px-6 cursor-pointer">
               Learn More
             </div>
+            </Link>
           }
          
         </div>

@@ -11,7 +11,7 @@ export default function Products() {
       cardTitle: "Merchandise",
       cardDescription:
         "At dbh we offer a unique way to make a statement and connect with the world around.",
-      productlink: "",
+      productlink: "merchandise",
     },
     {
       image: "/images/hotel-room.jpg",
@@ -21,17 +21,17 @@ export default function Products() {
       cardTitle: "Hospitality",
       cardDescription:
         "Our offerings encompass personalized supplies and branded products, showcasing top-notch operational tools tailored for various sectors. ",
-      productlink: "",
+      productlink: "hospitality",
     },
     {
       image: "/images/foodstuff.jpg",
       imageName: "Foodstuff",
-      productName: "Foodstuff Products ",
+      productName: "Foodstuff Products",
       productCategory: "Foodstuff Trading",
       cardTitle: " Foodstuff",
       cardDescription:
         " We deliver premium, seasonal food products like rice, dates, and grains, guaranteeing exceptional culinary experiences that surpass expectations.",
-      productlink: "",
+      productlink: "foodstuff",
     },
     {
       image: "/images/retail.jpg",
@@ -41,6 +41,7 @@ export default function Products() {
       cardTitle: "Retail",
       cardDescription:
         "At dbh, we procure retail goods both domestically and globally, enabling us to distribute a diverse range of products from various manufacturers to retailers.",
+      productlink: "retail",
     },
     {
       image: "/images/health-medical.jpg",
@@ -50,6 +51,7 @@ export default function Products() {
       cardTitle: "Health and Medical",
       cardDescription:
         "We offer a wide range of medical equipment and supplies, including but not limited to, surgical masks, gloves, and protective gear.",
+      productlink: "health-medical",
     },
     {
       image: "/images/computer-hardware.jpg",
@@ -59,6 +61,7 @@ export default function Products() {
       cardTitle: "Computer Accessories",
       cardDescription:
         "dbh offers the finest new and pre-owned computer hardware, as well as accessories sourced from world-renowned producers and manufacturers.",
+      productlink: "computer-accessories",
     },
   ];
   return (
@@ -82,6 +85,7 @@ export default function Products() {
               cardTitle={product.cardTitle}
               image={product.image}
               imageName={product.imageName}
+              link={product.productlink}
             />
           </div>
         ))}
