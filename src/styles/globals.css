@@ -17,13 +17,8 @@
 }
 
 body {
-  color: white;
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: black;
+  background: white;
 }
 .bounce-icon:hover {
   animation: bounce 1.5s;
