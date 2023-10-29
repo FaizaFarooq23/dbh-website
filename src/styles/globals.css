@@ -17,7 +17,7 @@
 }
 
 body {
-  color: black;
+  color: white;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -97,7 +97,7 @@ body {
   margin-right: 20px;
   background-color: #ef7f1a; 
 }
-@keyframes spin {
+@keyframes spin-custom {
   0% {
     transform: rotateY(0deg);
   }
@@ -109,6 +109,6 @@ body {
 .icon-spin{
  
   transform-style: preserve-3d;
-  animation: spin 1s  linear;
+  animation: spin-custom 1s  linear;
 }
 
