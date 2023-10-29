@@ -23,10 +23,11 @@ export default function ProductPage({ item }) {
           description={item.description}
           productTitle={item.cardTitle}
           subheading={item.subheading}
+          productList={item.productList}
         />
       </div>
 
-      <div className="flex items-center p-14 gap-x-12">
+      <div className="flex flex-col lg:flex-row items-center p-10 lg:p-14 gap-x-12">
         <ContactUs />
         <Map />
       </div>
