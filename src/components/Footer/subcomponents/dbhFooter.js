@@ -47,7 +47,7 @@ export default function DbhFooter({
     <div className="flex flex-col lg:grid lg:grid-cols-4 gap-x-1 px-4 lg:px-10 py-10 bg-primary">
       <div className="py-4 mt-8">
         <div className="-mt-6">
-          <img src="images/dbhLogo.jpg" alt="logo" className="h-16 w-32" />
+          <img src="/images/dbhLogo.jpg" alt="logo" className="h-16 w-32" />
         </div>
         <div className="mt-6">
           <p className="text-white font-medium">General Trading Company</p>

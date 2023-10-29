@@ -25,7 +25,7 @@ export default function LogoHead() {
   return (
     <div className="flex justify-between items-center bg-primary px-10 pt-6 pb-14 ">
       <div className="">
-        <img src="images/dbhLogo.jpg" alt="logo" className="h-20 w-40" />
+        <img src="/images/dbhLogo.jpg" alt="logo" className="h-20 w-40" />
       </div>
       <div className="flex gap-x-20 ">
       {headList.map((item, index) => (

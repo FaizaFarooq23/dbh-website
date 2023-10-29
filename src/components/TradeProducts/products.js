@@ -4,44 +4,62 @@ import ProductCards from "./subComponents/cards";
 export default function Products() {
   const productList = [
     {
-      image: "/images/gifts.jpg",
-      imageName: "Corporate Gifts",
-      productName: "Gifts",
-      link: "",
-      productCategory: "Gifts",
-      cardTitle: "Corporate Gifts",
-      cardDescription: " Show your appreciation to clients and employees with thoughtfully crafted corporate gifts that showcase your gratitude.",
+      image: "/images/merchandise.jpg",
+      imageName: "merchandise",
+      productName: "Merchandise",
+      productCategory: "Service Products",
+      cardTitle: "Merchandise",
+      cardDescription:
+        "At dbh we offer a unique way to make a statement and connect with the world around.",
       productlink: "",
     },
     {
-      image: "/images/items.jpg",
-      imageName: "Promotional Items",
-      productName: "Promotional Items",
-      link: "",
-      productCategory: "Promotional Items",
-      cardTitle: "Promotional Items",
-      cardDescription: "Make a statement at trade shows and events with eye-catching promotional items that leave a lasting impression.      ",
+      image: "/images/hotel-room.jpg",
+      imageName: "Hotel Room",
+      productName: "Hospitality-Hotel Supply Products",
+      productCategory: "Hotel Supplies",
+      cardTitle: "Hospitality",
+      cardDescription:
+        "Our offerings encompass personalized supplies and branded products, showcasing top-notch operational tools tailored for various sectors. ",
       productlink: "",
     },
     {
-      image: "/images/apperal.jpg",
-      imageName: "Branded Apparel",
-      productName: "Branded Apparel ",
-      link: "",
-      productCategory: "Branded Apparel",
-      cardTitle: "Branded Apparel",
-      cardDescription: " Elevate your team's look with custom-designed uniforms and corporate apparel that reflect your brand's identity.",
+      image: "/images/foodstuff.jpg",
+      imageName: "Foodstuff",
+      productName: "Foodstuff Products ",
+      productCategory: "Foodstuff Trading",
+      cardTitle: " Foodstuff",
+      cardDescription:
+        " We deliver premium, seasonal food products like rice, dates, and grains, guaranteeing exceptional culinary experiences that surpass expectations.",
       productlink: "",
     },
-{
-      image: "/images/giveaway.jpg",
-      imageName: "Unique Giveaways",
-      productName: "Unique Giveaways",
-      link: "",
-      productCategory: "Gadgets",
-      cardTitle: "Unique Giveaways",
-      cardDescription: "Create buzz around your brand with innovative and unique giveaway ideas that capture attention.",
-}
+    {
+      image: "/images/retail.jpg",
+      imageName: "Retail",
+      productName: "Retail & E-commerce Products",
+      productCategory: "E-Commerce",
+      cardTitle: "Retail",
+      cardDescription:
+        "At dbh, we procure retail goods both domestically and globally, enabling us to distribute a diverse range of products from various manufacturers to retailers.",
+    },
+    {
+      image: "/images/health-medical.jpg",
+      imageName: "health-medical",
+      productName: "Medical Equipments",
+      productCategory: "E-Commerce",
+      cardTitle: "Health and Medical",
+      cardDescription:
+        "We offer a wide range of medical equipment and supplies, including but not limited to, surgical masks, gloves, and protective gear.",
+    },
+    {
+      image: "/images/computer-hardware.jpg",
+      imageName: "computer-hardware",
+      productName: "Computer Hardware and Accessories",
+      productCategory: "Computer Accessories",
+      cardTitle: "Computer Accessories",
+      cardDescription:
+        "dbh offers the finest new and pre-owned computer hardware, as well as accessories sourced from world-renowned producers and manufacturers.",
+    },
   ];
   return (
     <div className=" my-10 py-8 bg-[#fafafa]  flex flex-col items-center justify-center">
@@ -54,23 +72,20 @@ export default function Products() {
           to the following:
         </div>
       </div>
-      <div className="flex flex-col lg:grid lg:grid-cols-4 gap-x-10 gap-y-10 px-[6%]  py-10">
-      {productList.map((product,index) => (
-        <div className="" key={index}>
-          <ProductCards
-            productCategory={product.productCategory}
-            productName={product.imageName}
-            productlink={product.productlink}
-            link={product.link}
-            cardDescription={product.cardDescription}
-            cardTitle={product.cardTitle}
-            image={product.image}
-            imageName={product.imageName}
-          />
+      <div className="flex flex-col lg:grid lg:grid-cols-3 gap-x-10 gap-y-10 px-[6%]  py-10">
+        {productList.map((product, index) => (
+          <div className="" key={index}>
+            <ProductCards
+              productCategory={product.productCategory}
+              productName={product.productName}
+              cardDescription={product.cardDescription}
+              cardTitle={product.cardTitle}
+              image={product.image}
+              imageName={product.imageName}
+            />
           </div>
-      
-      ))}
-        </div>
+        ))}
+      </div>
     </div>
   );
 }

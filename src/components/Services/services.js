@@ -17,7 +17,7 @@ export default function Services() {
     },
     {
       image: "/images/deal.png",
-      title: "Procrument",
+      title: "Procurement",
       description:
         "We provide procurement services to our clients. We help our clients to procure the best quality products at the best price.",
     },
@@ -25,7 +25,7 @@ export default function Services() {
       image: "/images/ecommerce.png",
       title: "E-commerce",
       description:
-        "dbh offers complete online solutions, specializing in product presentation, search optimization, ecommerce consulting, and fair-priced online product transactions.",
+        "dbh offers complete online solutions, specializing in product presentation, search optimization, e-commerce consulting, and fair-priced online product transactions.",
     },
   ];
 
@@ -42,7 +42,7 @@ export default function Services() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row pt-8 lg:pt-16 px-8 lg:px-20 gap-y-6 lg:gap-x-6 ">
+      <div className="flex flex-col lg:flex-row pt-8 lg:pt-16 px-8 lg:px-16 gap-y-6 lg:gap-x-7 ">
         {services.map((service, index) => (
           <IconWithText
           key={index}
